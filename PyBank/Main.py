@@ -10,11 +10,12 @@ budget_data_2_CSV = os.path.join('budget_data_2.csv')
 
 all_budget_data = pd.concat([budget_data_1_CSV, budget_data_2_CSV], axis=0)
 
+
 # Define the function and have it accept the 'BD1' as its sole parameter
 def data_insights(all_budget_data):
     
     # total # of months in dataset
-    #total_months = int(wrestlerData[1]) + int(wrestlerData[2]) + int(wrestlerData[3])
+    total_months = int(all_budget_data[0])
 
     # total revenue gained
     total_rev = round((int(all_budget_data[1]) ,2))
@@ -32,7 +33,7 @@ def data_insights(all_budget_data):
     print("Financial Analysis")
     print("------------------------------------------------")
     print(" ")
-    #print("Total Months: " + total_months)
+    print("Total Months: " + total_months)
     print("Total Revenue: " + total_rev)
     #print("Average Revenue Change: " + avg_rev)
     #print("Greatest Increase in Revenue: " + greatest_incr)
