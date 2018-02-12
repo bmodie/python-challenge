@@ -24,10 +24,10 @@ def data_insights(all_budget_data):
     #avg_rev = 
 
     # greatest increase in revenue (date, amount)
-    #greatest_incr = (int(wrestlerData[2])/totalMatches)*100
+    #greatest_incr = 
 
     # greatest decrease in revenue (date, amount)
-    #greatest_decr = (int(wrestlerData[3])/totalMatches)*100
+    #greatest_decr = 
 
     # Print Results
     print("Financial Analysis")
