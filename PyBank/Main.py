@@ -8,7 +8,10 @@ import dateutil
 budget_data_1_CSV = os.path.join('budget_data_1.csv')
 budget_data_2_CSV = os.path.join('budget_data_2.csv')
 
-all_budget_data = pd.concat([budget_data_1_CSV, budget_data_2_CSV], axis=0)
+df = pd.read_csv(budget_data_1_CSV, names=['Date', 'Revenue'])
+df1 = pd.read_csv(budget_data_2_CSV, header=None)
+
+all_budget_data = pd.concat([df, df1], axis=0)
 
 
 # Define the function and have it accept the 'BD1' as its sole parameter
