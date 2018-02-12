@@ -15,10 +15,12 @@ df1 = pd.read_csv(budget_data_2_CSV, header=None)
 all_budget_data = pd.concat([df, df1], axis=0)
 
 # Define the function
-def revenue(all_budget_data[1]):
-
+def data_insight(all_budget_data):
+    for revenue in all_budget_data:
+        sum(all_budget_data[1])
+    
     # total revenue gained
-    total_rev = sum(float(numbers1) + float(numbers2))
+#total_rev = sum(float(numbers1) + float(numbers2))
 
     # total # of months in dataset
     #total_months = str(all_budget_data[0])
@@ -33,11 +35,12 @@ def revenue(all_budget_data[1]):
     #greatest_decr = 
 
     # Print Results
-print("Financial Analysis")
-print("------------------------------------------------")
-print(" ")
+    print("Financial Analysis")
+    print("------------------------------------------------")
+    print(" ")
+    print(revenue)
     # print("Total Months: " + total_months)
-print("Total Revenue: " + total_rev)
+#print("Total Revenue: " + total_rev)
     #print("Average Revenue Change: " + avg_rev)
     #print("Greatest Increase in Revenue: " + greatest_incr)
     #print("Greatest Decrease in Revenue: " + greatest_decr)
