@@ -19,7 +19,7 @@ unique_months = len(budget_merge["Date"].unique())
 # total revenue gained
 total_revenue = budget_merge['Revenue'].sum()
 
-# average change in revenue
+# average monthly revenue
 avg_revenue = total_revenue / unique_months
 
 # greatest increase in revenue (date, amount)
