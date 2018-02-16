@@ -12,7 +12,6 @@ letter_count = len(letter_list)
 word_list = data.split()
 ## calculate the number of words
 word_count = len(word_list)
-print(word_count)
 
 ## calculate the number of sentences
 sent_list = data.split('.')
