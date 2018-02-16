@@ -1,44 +1,39 @@
-import os
-import csv
 import pandas as pd 
-import dateutil
 
 # Path to collect data
-budget_data_1_CSV = os.path.join('budget_data_1.csv')
-budget_data_2_CSV = os.path.join('budget_data_2.csv')
+budget_data_1_csv = "budget_data_1.csv"
+budget_data_2_csv = "budget_data_2.csv"
 
-# convert to datafile
-df = pd.read_csv(budget_data_1_CSV, names=['Date', 'Revenue'])
-df1 = pd.read_csv(budget_data_2_CSV, header=None)
+# Create dataframe
+budget_data_1_df = pd.read_csv(budget_data_1_csv, encoding = "ISO-8859-1")
+budget_data_2_df = pd.read_csv(budget_data_2_csv, encoding = "ISO-8859-1")
 
-# concatenate the two files
-all_budget_data = pd.concat([df, df1], axis=0)
+# Merge the two data sources
+budget_merge = pd.merge(budget_data_1_df, budget_data_2_df)
 
-# Define the function
-def get_insight(all_budget_data):
+# Define the function and have it accept the 'BD1' as its sole parameter
+
     
-    # total revenue gained
-    total_rev = sum(int(all_budget_data))
+# total # of months in dataset
+    
 
-    # total # of months in dataset
-    #total_months = str(all_budget_data[0])
+# total revenue gained
+    
 
-    # average change in revenue between months
-    #avg_rev = 
+# average change in revenue between months
+    
 
-    # greatest increase in revenue (date, amount)
-    #greatest_incr = 
+# greatest increase in revenue (date, amount)
+    
 
-    # greatest decrease in revenue (date, amount)
-    #greatest_decr = 
+# greatest decrease in revenue (date, amount)
+    
 
-    # Print Results
-    print("Financial Analysis")
-    print("------------------------------------------------")
-    print(" ")
-    print(str(total_rev))
-    # print("Total Months: " + total_months)
-#print("Total Revenue: " + total_rev)
-    #print("Average Revenue Change: " + avg_rev)
-    #print("Greatest Increase in Revenue: " + greatest_incr)
-    #print("Greatest Decrease in Revenue: " + greatest_decr)
+# Print Results
+print("Financial Analysis")
+print("------------------")
+#print("Total Months: " + str(total_months))
+#print("Total Revenue: " + str(total_revenue)
+#print("Average Revenue Change: " + str(avg_revenue_change))
+#print("Greatest Increase in Revenue: " + str(greatest_revenue_increase))
+#print("Greatest Decrease in Revenue: " + str(greatest_revenue_decrease))
